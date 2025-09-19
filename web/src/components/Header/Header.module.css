@@ -1,0 +1,168 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* ===================== HEADER ===================== */
+.header {
+  width: 100%;
+  background: transparent;
+  padding: 24px 0px 22px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* ===================== NAVIGATION ===================== */
+.nav {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  justify-content: space-between;
+  height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navLeft {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.navCenter {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===================== LOGO ===================== */
+.logoNavContainer {
+  display: none;
+}
+.logoContainer {
+  height: 72px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.logoImg {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 8px rgba(140,16,7,0.10));
+  background: transparent;
+}
+
+/* ===================== NAV ITEMS ===================== */
+.navItems {
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 40px;
+  opacity: 1;
+  visibility: visible;
+  letter-spacing: 2.5px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.hideNav {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.navButton {
+  text-decoration: none;
+  color: #8C1007;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s, background 0.2s;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  letter-spacing: 2.5px;
+  padding: 0px 30px 0px 0px;
+}
+.navButtonText {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'League Spartan', sans-serif;
+}
+.navButtonText::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #C1282D 0%, #ffb347 100%);
+  border-radius: 0;
+  transition: width 0.3s cubic-bezier(.4,2,.6,1);
+}
+.navButton:hover .navButtonText::after,
+.navButton.active .navButtonText::after {
+  width: 100%;
+}
+.navButton:hover,
+.navButton.active {
+  color: #C1282D;
+  background: none;
+}
+
+/* ===================== SEARCH ===================== */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 999px;
+  height: 44px;
+  padding: 0 18px;
+  margin-left: 30px;
+  position: absolute;
+  right: 0;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+}
+.searchContainer:focus-within {
+  box-shadow: none;
+}
+.searchIcon {
+  color: #C1282D;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.searchBar {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 140px;
+  font-size: 18px;
+  font-family: 'League Spartan', sans-serif;
+  color: #8C1007;
+  padding: 0 4px;
+}
+
+/* ===================== HERO OVERLAY (for homepage hero, not header) ===================== */
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.32);
+  z-index: 2;
+  pointer-events: none;
+}

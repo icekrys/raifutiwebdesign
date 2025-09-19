@@ -1,0 +1,392 @@
+/* Business Hours Container */
+.businessHoursContainer {
+  font-size: 1.5rem;
+  font-family: 'Figtree', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+
+/* Main container for the contact page */
+.contactPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* 1st Part - Hero Section */
+  .heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: 600px;
+    display: block;
+    filter: brightness(0.10); /* Darken the image */
+  }
+  
+  .heroTitle {
+    font-family: 'Figtree', serif;
+    position: absolute;
+    top: 40%; /* Move text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* White text */
+    z-index: 2;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  /* 2nd Part - Map Section */
+  .mapSection {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: #f9f5f0;
+  }
+  
+  .mapSection iframe {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ========== Contact Us Section ========== */
+.contactSection {
+  background: #f7f3ef;
+  padding: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contactContainer {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 48px 36px 36px 36px;
+  max-width: 540px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactContainer h2 {
+  font-family: 'Figtree', serif;
+  font-size: 2.5rem;
+  color: #4C2720;
+  margin-bottom: 12px;
+}
+
+.contactContainer p {
+  font-size: 1.1rem;
+  font-family: 'League Spartan', sans-serif;
+  color: #4A3B3B;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  color: #402F23;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e0d6ce;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f9f6f3;
+  color: #402F23;
+  resize: none;
+  transition: border 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border: 1.5px solid #a67b5b;
+  outline: none;
+}
+
+.contactButton {
+  background: linear-gradient(90deg, #8C1007 0%, #A67B5B 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(140, 16, 7, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contactButton:hover {
+  background: linear-gradient(90deg, #A67B5B 0%, #8C1007 100%);
+  transform: scale(1.04);
+}
+
+.contactDetails {
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+  color: #4A3B3B;
+  font-size: 1.1rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.contactDetails p {
+  margin: 6px 0;
+  font-size: 1.1rem;  
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.contactFlexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactTextBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 24px;
+  max-width: 420px;
+  min-width: 320px;
+}
+
+.contactTextBlock h2 {
+  font-family: 'Figtree', serif;
+  font-size: 2.5rem;
+  color: #4C2720;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.contactTextBlock p {
+  font-size: 1.1rem;
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .contactSection {
+    padding: 40px 0 30px 0;
+    min-height: unset;
+  }
+  .contactFlexRow {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactTextBlock {
+    align-items: center;
+    padding-right: 0;
+    max-width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+  .contactTextBlock h2 {
+    text-align: center;
+  }
+  .contactTextBlock p {
+    text-align: justify;
+  }
+  .contactContainer {
+    align-items: center;
+  }
+}
+.contactSection {
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+/* Bottom Sheet Modal Styles */
+.bottomSheetModalOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.bottomSheetModal {
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  width: 100%;
+  max-width: 420px;
+  min-height: 220px;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  position: relative;
+  animation: bottomSheetSlideUp 0.35s cubic-bezier(.4,2,.6,1);
+}
+@keyframes bottomSheetSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.bottomSheetClose {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #a67b5b;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+}
+.bottomSheetClose:hover {
+  color: #8C1007;
+}
+.bottomSheetContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.bottomSheetImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+.bottomSheetTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #402F23;
+  margin-bottom: 0.5rem;
+}
+.bottomSheetDesc {
+  font-size: 1.1rem;
+  color: #402F23;
+  text-align: center;
+}
+
+.iconSmall {
+  width: 25px;
+  height: 25  px;
+}
+
+.emailContainer {
+  padding: 10px 0;
+}
+
+.containerContactNumber {
+  padding: 10px 0;
+}
+
+.containerLocation {
+  padding: 10px 0;
+}
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .heroSection {
+      height: 80vh;
+      min-height: 500px;
+    }
+    
+    .heroTitle {
+      font-size: 3rem;
+    }
+    
+    .mapSection {
+      padding: 3rem 0;
+    }
+    
+    .mapSection iframe {
+      height: 400px;
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroSection {
+      height: 70vh;
+      min-height: 400px;
+    }
+    
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+    
+    .mapSection iframe {
+      height: 300px;
+    }
+  }
+  
+/* ========== Scroll Up Button ========== */
+.scrollUpButton {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+  background: rgba(64, 47, 35, 0.35); /* semi-transparent */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  opacity: 1;
+  transition: opacity 0.3s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.scrollUpButtonHidden {
+  opacity: 0;
+  pointer-events: none;
+}

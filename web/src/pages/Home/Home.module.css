@@ -1,0 +1,894 @@
+/* Wrapper for hero image and content overlay */
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ===================== SIGNAGE HERO SECTION ===================== */
+.signageHeroSection {
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 600px;
+  display: block;
+  filter: brightness(0.5); /* Darken the image */
+  
+}
+
+.signageHeroContent {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 48px 32px;
+  border-radius: 18px 32px 32px 0;
+  text-align: left;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  align-items: flex-start;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.signageHeroTitle {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+  font-family: 'Figtree', serif;
+  letter-spacing: 1px;
+}
+
+.signageHeroSubtitle {
+  font-size: 1.5rem;
+  font-family: 'League Spartan', sans-serif;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+.signageHeroDesc {
+  font-size: 1.15rem;
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.6;
+}
+/* ===================== VIEW MORE BUTTON ===================== */
+
+.viewMoreButton {
+  font-family: 'League Spartan', sans-serif;
+  background-color: #C1282D;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18), 0 1.5px 8px rgba(60,60,60,0.10);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-right: 8rem;
+  margin-top: -30px;
+}
+
+.viewMoreButton:hover, .viewMoreButton:focus {
+  background-color: #8C1007;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* ===================== GLOBAL & FONTS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+html {
+  scroll-behavior: smooth;
+  font-family: 'League Spartan', sans-serif;
+}
+body {
+  font-family: 'League Spartan', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ===================== 1. HERO / IMAGE CAROUSEL SECTION ===================== */
+ .imageCarouselSection {
+   width: 100vw;
+   height: 100vh;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: stretch;
+   overflow: hidden;
+   background: #000;
+ }
+
+
+.carouselImage,
+.swiperImageCarousel {
+  width: 100vw;
+  height: 475px;
+  min-height: 475px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ===================== 2. ICONS SECTION ===================== */
+.iconsSection {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  padding: 40px 0px;
+  background: #fff;
+}
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1);
+}
+.iconImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  transition: filter 0.5s cubic-bezier(.4,2,.6,1);
+}
+.iconItem p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #402F23;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ===================== 3. TOP COFFEE SALE (Menu Boxes) ===================== */
+.menuBoxContainer {
+  border-radius: 0;
+  width: 100%;
+}
+.menusContainer {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  padding: 24px 0;
+}
+.menuBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 340px;
+  min-width: 340px;
+  max-width: 340px;
+  height: 420px;
+  max-height: 420px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  margin: 0;
+  padding: 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.menuBox:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+  cursor: pointer;
+}
+.menuImage {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.menuBoxInfo {
+  background: #fff;
+  padding: 1.1rem 1.3rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 140px;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+.menuBoxBottomRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 0.5rem;
+  min-height: 40px;
+}
+.menuBoxDesc {
+  font-size: 1.1rem;
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+.menuBoxName {
+  font-size: 1.5rem;
+  color: #4C2720;
+  margin: 0 0 0.2rem 0;
+  font-family: 'Figtree', serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.menuBoxPrice {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #2E1A15;
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: 0.5px;
+}
+.menuBoxSizes {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.sizeButton {
+  background-color: #C1282D;
+  font-family: 'League Spartan', sans-serif;
+  color: #fff;
+  padding: 4px 12px 1px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.sizeButton.active {
+  background-color: #4C2720;
+  color: #fff;
+}
+.sizeButton:hover {
+  background-color: #8C1007;
+  transform: scale(1.05);
+}
+.sizeButton:focus {
+  outline: none;
+  border-color: #6B4F3D;
+  box-shadow: 0 0 0 3px rgba(108, 64, 52, 0.3);
+}
+.topCoffeeSaleLabel {
+  font-size: 2.5rem;
+  color: #4C2720;
+  font-family: 'Figtree', serif;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+}
+.topCoffeeSaleSubLabel {
+  font-size: 1.1rem;
+  color: #4A3B3B;
+  margin-top: 2px;
+  text-align: center;
+  display: block;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* ===================== 4. TOP PRODUCT SALE (Best Sellers Carousel) ===================== */
+.carouselContainerBox {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerBoxSection {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  background-image: url('../../assets/images/coffeepin.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.containerBoxSection > * {
+  position: relative;
+  z-index: 3;
+}
+.containerBoxSection::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+.bestSellersHeader {
+  text-align: center;
+  color: #fff;
+}
+.sectionDescription {
+    
+  text-align: center;
+  margin: 1rem auto 4.5rem auto;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+.sectionTitle {
+  font-family: 'Figtree', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.swiperContainerBox {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+/* ===================== 5. PROMO SECTION ===================== */
+.promoCircleLeft {
+  position: absolute;
+  left: -60px;
+  bottom: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #4C2720 0%, #4A3B3B 100%);
+  border-radius: 50%;
+  opacity: 0.95;
+  z-index: 0;
+}
+.promoCircleRight {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #4C2720 100%, #4A3B3B 0%);
+  border-radius: 50%;
+  opacity: 0.75;
+  z-index: 0;
+}
+.promoDesc {
+  font-size: 13px;
+  color: #666;
+  max-width: 340px;
+  line-height: 1.5;
+  font-family: 'League Spartan', sans-serif;
+}
+.promoDivider {
+  height: 2px;
+  width: 80px;
+  background: #4caf50;
+  margin: 8px 0 24px 0;
+}
+
+.promoImage {
+  width: 480px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(76,175,80,0.18);
+  background: #fff;
+  border: 6px solid #e8f5e9;
+  margin-left: -4rem;
+}
+.promoImageCol {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.promoPrice {
+  font-weight: 600;
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 8px;
+}
+.promoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0;
+  padding: 30px;
+  margin-top: 4.8rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 1.5px 8px rgba(60,60,60,0.08);
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.promoTextCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+  height: 100%;
+  min-height: 280px;
+  padding-left: 8rem;
+}
+.promoTitleMain {
+  font-weight: 700;
+  font-size: 48px;
+  color: #222;
+  letter-spacing: 1px;
+  font-family: 'League Spartan', sans-serif;
+}
+.promoTitleSub {
+  font-weight: 400;
+  font-size: 40px;
+  color: #4caf50;
+  font-style: italic;
+  margin-bottom: 16px;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* ===================== 6. ABOUT US SECTION ===================== */
+.containerBlack {
+  width: 100%;
+  min-height: 200px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.8rem;
+  margin-bottom: 40px;
+}
+.containerBlackImg {
+  max-width: 650px;
+  height: 650px;
+  padding: 1rem;
+  border-radius: 26px;
+  object-fit: cover;
+}
+.containerBlackImgWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+}
+
+/* Hover effect for About Us section */
+.containerBlackImgWrapper:hover {
+  box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  transform: translateY(-6px) scale(1.02);
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.containerBlackText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2.5rem;
+  height: 100%;
+  min-width: 320px;
+  max-width: 600px;
+  align-items: center;
+  text-align: center;
+}
+.containerBlackText h2 {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  color: #4C2720;
+  margin-bottom: 1rem;
+
+}
+.containerBlackText p {
+  font-size: 1.125rem;
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================== 7. OUR TEAM SECTION ===================== */
+.containerBoxAboutUs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0rem 1.5rem;
+  gap: 3rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  margin-top: 4.8rem;
+}
+
+/* Hover effect for Our Team section */
+.containerBoxAboutUs:hover {
+  box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  transform: translateY(-6px) scale(1.02);
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.containerBoxImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0;
+  margin-right: 0;
+}
+.containerImage {
+  width: 650px;
+  height: 650px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+  padding: 1rem;
+  border-radius: 26px;
+}
+.containerText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2.5rem;
+  height: 100%;
+  min-width: 320px;
+  max-width: 600px;
+  align-items: center;
+  text-align: center;
+}
+.containerText h2 {
+  font-size: 2rem;
+  color: #4C2720;
+  margin-bottom: 1rem;
+  font-family: 'Figtree', serif;
+  align-items: center;
+  text-align: center;
+}
+.containerText p {
+  font-size: 1.125rem;
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================== 8. TESTIMONIALS SECTION ===================== */
+.testimonialsSection {
+  background: url('../../assets/images/milkteapin2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  padding: 90px 0;
+  margin-top: 4.8rem;
+}
+.testimonialsHeader {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.testimonialsHeader h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: 'League Spartan', sans-serif;
+}
+.testimonialsHeader p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-family: 'League Spartan', sans-serif;
+}
+.testimonialsCards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.testimonialCard {
+  background: #fff8ee;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  max-width: 340px;
+  min-width: 260px;
+  text-align: center;
+}
+.stars {
+  color: #f7b731;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.testimonialText {
+  color: #6b4f27;
+  font-style: italic;
+  margin-bottom: 18px;
+  font-family: 'League Spartan', sans-serif;
+}
+.testimonialProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.profileName {
+  font-weight: bold;
+  color: #6b4f27;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* ===================== 9. CONTACT US SECTION ===================== */
+.contactSection {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  min-height: 600px;
+  box-sizing: border-box;
+  margin: 5.8rem 0 4.2rem 0;
+}
+.contactFlexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contactTextBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 24px;
+  max-width: 420px;
+  min-width: 320px;
+}
+.contactTextBlock h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #C1282D;
+  margin-bottom: 16px;
+  font-family: 'League Spartan', sans-serif;
+  text-align: left;
+}
+.contactTextBlock p {
+  font-size: 1.1rem;
+  color: #402F23;
+  font-family: 'League Spartan', sans-serif;
+  text-align: justify;
+  line-height: 1.7;
+}
+.contactContainer {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 48px 36px 36px 36px;
+  max-width: 900px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactContainer:hover {
+  box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  transform: translateY(-6px) scale(1.02);
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.contactContainer h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #402F23;
+  margin-bottom: 12px;
+  font-family: 'League Spartan', sans-serif;
+}
+.contactContainer p {
+  font-size: 1.1rem;
+  color: #402F23;
+  margin-bottom: 28px;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+}
+.contactDetails {
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+  color: #402F23;
+  font-size: 1rem;
+  font-family: 'League Spartan', sans-serif;
+}
+.contactDetails p {
+  margin: 6px 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+}
+/* ===================== 10. MAP SECTION ===================== */
+.mapSection {
+  width: 100%;
+  padding: 40px 0;
+  background: #fff;
+}
+.mapContainer {
+  width: 100%;
+  max-width: 850px;
+  min-width: 380px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.viewLargerMapButton {
+  display: inline-block;
+  color: #4caf50;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+.iconContactImage{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  transition: filter 0.5s cubic-bezier(.4,2,.6,1);
+}
+ 
+/* ===================== 11. SCROLL UP BUTTON ===================== */
+.scrollUpButton {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+  background: rgba(64, 47, 35, 0.20);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  opacity: 1;
+  transition: opacity 0.3s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.scrollUpButtonHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===================== OUR MENU SECTION (Grid for 3x2 Menu Boxes) ===================== */
+.ourMenuGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;  
+  align-items: center;
+}
+.ourMenuRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.ourMenuTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4C2720; 
+  font-family: 'Figtree', serif;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-top: 2px;
+  display: block;
+}
+
+.ourMenuDescription {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4A3B3B;
+  font-family: 'League Spartan', sans-serif;
+  margin-bottom: 24px;
+  width: 100%;
+  display: block;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1100px) {
+  .ourMenuRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .ourMenuGrid {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .contactSection {
+    padding: 40px 0 30px 0;
+    min-height: unset;
+  } 
+  .contactFlexRow {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactTextBlock {
+    align-items: center;
+    padding-right: 0;
+    max-width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+  .contactTextBlock h2 {
+    text-align: center;
+  }
+  .contactTextBlock p {
+    text-align: justify;
+  }
+  .contactContainer {
+    align-items: center;
+  }
+}
+
+/* Hover effect for Contact Us block, not affecting paragraphs */
+.contactTextBlock:hover {
+  /* Only visual effect, does not override layout or children */
+  box-shadow: 0 8px 32px 0 rgba(193,40,45,0.10), 0 2px 12px rgba(0,0,0,0.08);
+  transform: translateY(-4px) scale(1.01);
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
