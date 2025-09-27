@@ -17,7 +17,6 @@
   .heroSection {
     position: relative;
     width: 100%;
-    height: 100vh;
     min-height: 600px;
     overflow: hidden;
   }
@@ -47,8 +46,9 @@
   /* 2nd Part - Map Section */
   .mapSection {
     width: 100%;
-    padding: 4rem 0;
-    background-color: #f9f5f0;
+    padding: 4rem;
+    margin: 0rem 0rem 4.8rem 0rem ;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .mapSection iframe {
@@ -64,12 +64,12 @@
 
   /* ========== Contact Us Section ========== */
 .contactSection {
-  background: #f7f3ef;
-  padding: 80px 0 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 4.8rem 0rem 4.8rem 0rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contactContainer {

@@ -1,8 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import styles from './About.module.css';
 import signage from '../../assets/images/finalimage.jpg';
-import React, { useState, useEffect } from 'react';
 
-// Scroll Up Button Component
+// ===================== SCROLL UP BUTTON =====================
 function ScrollUpButton() {
   const [visible, setVisible] = useState(false);
 
@@ -25,16 +25,17 @@ function ScrollUpButton() {
   );
 }
 
+// ===================== ABOUT PAGE =====================
 export default function About() {
   return (
     <div className={styles.aboutPage}>
-      {/* 1st Part - Hero section */}
+      {/* ===================== HERO SECTION ===================== */}
       <section className={styles.heroSection}>
         <img src={signage} alt="About Us" className={styles.heroImage} />
         <h1 className={styles.heroTitle}>About Us</h1>
       </section>
 
-      {/* ===============ABOUT US ================== */}
+      {/* ===================== ABOUT US SECTION ===================== */}
       <section id="about" className={styles.containerBlack}>
         <div className={styles.containerBlackImgWrapper}>
           <img
@@ -44,12 +45,14 @@ export default function About() {
           />
           <div className={styles.containerBlackText}>
             <h2>About Us</h2>
-            <p> Welcome to Brewnative! We are passionate about crafting the perfect cup of coffee and serving delicious treats in a cozy atmosphere.</p>
+            <p>
+              Welcome to Brewnative! We are passionate about crafting the perfect cup of coffee and serving delicious treats in a cozy atmosphere.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* =============== ABOUT US2 ================== */}
+      {/* ===================== OUR TEAM SECTION ===================== */}
       <section className={styles.containerBoxAboutUs}>
         <div className={styles.containerText}>
           <h2>Our Team</h2>
@@ -65,6 +68,8 @@ export default function About() {
           />
         </div>
       </section>
+
+      {/* ===================== SCROLL UP BUTTON ===================== */}
       <ScrollUpButton />
     </div>
   );

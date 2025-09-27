@@ -1,6 +1,14 @@
+// ===== Imports =====
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { motion } from 'motion/react';
 import styles from './Home.module.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// ===== Assets =====
 import signage from '../../assets/images/finalimage.jpg';
 import icedCaramelMacchiato from '../../assets/images/IcedCaramelMacchiato.jpg';
 import cappuccino from '../../assets/images/Cappuccino.jpg';
@@ -13,30 +21,113 @@ import email from '../../assets/icons/email1.jpg';
 import location from '../../assets/icons/location.jpg';
 import drinks from '../../assets/icons/beverage.png';
 import desserts from '../../assets/icons/cake2.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 
-// New: Full-width signage section data
+// ===== Static Data =====
 const signageSectionData = {
   title: 'Welcome to Raifuti',
-  subtitle: 'Experience the perfect blend of coffee and comfort',
-  description: 'Enjoy our signature drinks, delicious desserts, and a cozy atmosphere. Discover your new favorite spot today!'
+  subtitle: 'Your Cozy Coffee Haven',
+  description: 'Enjoy our signature blends and delicious desserts in a relaxing atmosphere.',
 };
 
-// Scroll Up Button Component
+const menuBoxes = [
+  {
+    name: 'Americano',
+    image: cappuccino,
+    prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
+    description: 'Classic espresso with hot water.',
+  },
+  {
+    name: 'Blueberry Cheesecake',
+    image: tiramisucake,
+    prices: { S: '₱120.00', M: '₱150.00', L: '₱180.00' },
+    description: 'Rich cheesecake with blueberry topping.',
+  },
+  {
+    name: 'Red Velvet Cake',
+    image: caramelapplecake,
+    prices: { S: '₱110.00', M: '₱140.00', L: '₱170.00' },
+    description: 'Moist red velvet cake with cream cheese.',
+  },
+  {
+    name: 'Cortado Coffee',
+    image: CortadoCoffee,
+    prices: { S: '₱105.00', M: '₱125.00', L: '₱145.00' },
+    description: 'Espresso cut with a small amount of warm milk.',
+  },
+  {
+    name: 'Iced Caramel Macchiato',
+    image: icedCaramelMacchiato,
+    prices: { S: '₱115.00', M: '₱135.00', L: '₱155.00' },
+    description: 'Signature drink with espresso, vanilla, milk, caramel.',
+  },
+  {
+    name: 'Tiramisu Cake',
+    image: tiramisucake,
+    prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
+    description: 'Classic Italian dessert with coffee and mascarpone.',
+  },
+];
+
+const containerBoxMenus = [
+  {
+    name: 'Mocha Frappe',
+    image: require('../../assets/images/frappe1.jpg'),
+    description: 'Chilled espresso with chocolate and cream.',
+    prices: { S: '₱110.00', M: '₱130.00', L: '₱150.00' },
+  },
+  {
+    name: 'Mango Supreme Cake',
+    image: require('../../assets/images/mangosupremecake.jpg'),
+    description: 'A tropical delight with fresh mangoes.',
+    prices: { S: '₱120.00', M: '₱150.00', L: '₱180.00' },
+  },
+  {
+    name: 'Death by Chocolate Cake',
+    image: require('../../assets/images/deathbychocolatecake.jpg'),
+    description: 'Rich chocolate cake for chocolate lovers.',
+    prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
+  },
+  {
+    name: 'Blueberry Cream Cheese',
+    image: require('../../assets/images/blueberrycreamcheese.jpg'),
+    description: 'Moist muffin with blueberry and cream cheese.',
+    prices: { S: '₱70.00', M: '₱90.00', L: '₱110.00' },
+  },
+  {
+    name: 'Iced Caramel Macchiato',
+    image: icedCaramelMacchiato,
+    description: 'Signature drink with espresso, vanilla, milk, caramel.',
+    prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
+  },
+];
+
+const blogCards = [
+  {
+    image: require('../../assets/images/raifutiemployees.jpg'),
+    title: 'Coffee Connoisseur',
+    description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
+  },
+  {
+    image: require('../../assets/images/coffee1.jpg'),
+    title: 'Coffee Connoisseur',
+    description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
+  },
+  {
+    image: require('../../assets/images/signage.jpg'),
+    title: 'Coffee Connoisseur',
+    description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
+  },
+];
+
+// ===== Components =====
 function ScrollUpButton() {
   const [visible, setVisible] = useState(false);
-
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
   return (
     <button
       onClick={scrollToTop}
@@ -50,7 +141,6 @@ function ScrollUpButton() {
 
 function MenuBox({ name, image, prices, description, onMenuBoxBottomRowClick }) {
   const [selectedSize, setSelectedSize] = useState('L');
-
   return (
     <div className={styles.menuBox}>
       <img src={image} alt={name} className={styles.menuImage} />
@@ -83,13 +173,12 @@ function MenuBox({ name, image, prices, description, onMenuBoxBottomRowClick }) 
   );
 }
 
-// ===================== MAIN PAGE =====================
+// ===== Main Home Function =====
 export default function Home() {
   const navigate = useNavigate();
   const swiperRef = useRef(null);
   const autoplayTimeout = useRef(null);
 
-  // Pause/resume carousel autoplay on interaction
   const handleMenuBoxBottomRowClick = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.autoplay.stop();
@@ -100,101 +189,9 @@ export default function Home() {
     }
   };
 
-  // Menu data
-  const menuBoxes = [
-    {
-      name: 'Americano',
-      image: cappuccino,
-      prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
-      description: 'Classic espresso with hot water.',
-    },
-    {
-      name: 'Blueberry Cheesecake',
-      image: tiramisucake,
-      prices: { S: '₱120.00', M: '₱150.00', L: '₱180.00' },
-      description: 'Rich cheesecake with blueberry topping.',
-    },
-    {
-      name: 'Red Velvet Cake',
-      image: caramelapplecake,
-      prices: { S: '₱110.00', M: '₱140.00', L: '₱170.00' },
-      description: 'Moist red velvet cake with cream cheese.',
-    },
-    {
-      name: 'Cortado Coffee',
-      image: CortadoCoffee,
-      prices: { S: '₱105.00', M: '₱125.00', L: '₱145.00' },
-      description: 'Espresso cut with a small amount of warm milk.',
-    },
-    {
-      name: 'Iced Caramel Macchiato',
-      image: icedCaramelMacchiato,
-      prices: { S: '₱115.00', M: '₱135.00', L: '₱155.00' },
-      description: 'Signature drink with espresso, vanilla, milk, caramel.',
-    },
-    {
-      name: 'Tiramisu Cake',
-      image: tiramisucake,
-      prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
-      description: 'Classic Italian dessert with coffee and mascarpone.',
-    },
-  ];
-
-  const containerBoxMenus = [
-    {
-      name: 'Mocha Frappe',
-      image: require('../../assets/images/frappe1.jpg'),
-      description: 'Chilled espresso with chocolate and cream.',
-      prices: { S: '₱110.00', M: '₱130.00', L: '₱150.00' },
-    },
-    {
-      name: 'Mango Supreme Cake',
-      image: require('../../assets/images/mangosupremecake.jpg'),
-      description: 'A tropical delight with fresh mangoes.',
-      prices: { S: '₱120.00', M: '₱150.00', L: '₱180.00' },
-    },
-    {
-      name: 'Death by Chocolate Cake',
-      image: require('../../assets/images/deathbychocolatecake.jpg'),
-      description: 'Rich chocolate cake for chocolate lovers.',
-      prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
-    },
-    {
-      name: 'Blueberry Cream Cheese',
-      image: require('../../assets/images/blueberrycreamcheese.jpg'),
-      description: 'Moist muffin with blueberry and cream cheese.',
-      prices: { S: '₱70.00', M: '₱90.00', L: '₱110.00' },
-    },
-    {
-      name: 'Iced Caramel Macchiato',
-      image: icedCaramelMacchiato,
-      description: 'Signature drink with espresso, vanilla, milk, caramel.',
-      prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
-    },
-  ];
-
-  // Refactored blog cards as array
-  const blogCards = [
-    {
-      image: require('../../assets/images/raifutiemployees.jpg'),
-      title: 'Coffee Connoisseur',
-      description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
-    },
-    {
-      image: require('../../assets/images/coffee1.jpg'),
-      title: 'Coffee Connoisseur',
-      description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
-    },
-    {
-      image: require('../../assets/images/signage.jpg'),
-      title: 'Coffee Connoisseur',
-      description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
-    },
-  ];
-
   return (
     <div className={styles.container}>
-      {/* ===================== SIGNAGE HERO SECTION ===================== */}
+      {/* ===== HERO SECTION ===== */}
       <section className={styles.signageHeroSection}>
         <div id="home" className={styles.heroImageWrapper}>
           <img src={signage} alt="Home" className={styles.heroImage} />
@@ -206,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== ICONS SECTION ===================== */}
+      {/* ===== ICONS SECTION ===== */}
       <section className={styles.iconsSection}>
         <div className={styles.iconItem}>
           <img src={coffee} alt="Coffee" className={styles.iconImage}/>
@@ -222,9 +219,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== TOP COFFEE SALE (Menu Boxes) ===================== */}
-      <div className={styles.topCoffeeSaleOuterContainer}> 
-        <div className={styles.menuBoxContainer}> 
+      {/* ===== TOP COFFEE SALE ===== */}
+      <div className={styles.topCoffeeSaleOuterContainer}>
+        <div className={styles.menuBoxContainer}>
           <div>
             <span className={styles.topCoffeeSaleLabel}>Top Coffee Sale</span>
             <span className={styles.topCoffeeSaleSubLabel}>Your Favorite Blends at Unbeatable Prices</span>
@@ -243,7 +240,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===================== TOP PRODUCT SALE (Best Sellers Carousel) ===================== */}
+      {/* ===== TOP PRODUCT SALE (Carousel) ===== */}
       <section className={styles.containerBoxSection}>
         <div className={styles.bestSellersHeader}>
           <h2 className={styles.sectionTitle}> Top Product Sale </h2>
@@ -282,7 +279,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== OUR MENU SECTION ===================== */}
+      {/* ===== OUR MENU SECTION ===== */}
       <div className={styles.ourMenuOuterContainer}>
         <section id="menu" className={styles.ourMenuSection}>
           <h2 className={styles.ourMenuTitle}>Our Menu</h2>
@@ -322,7 +319,7 @@ export default function Home() {
         </section>
       </div>
 
-      {/* ===================== PROMO SECTION ===================== */}
+      {/* ===== PROMO SECTION ===== */}
       <div id="promotions" className={styles.promoSection}>
         <div className={styles.promoTextCol}>
           <div className={styles.promoTitleMain}>MATCHA</div>
@@ -344,7 +341,7 @@ export default function Home() {
         <div className={styles.promoCircleRight} />
       </div>
 
-      {/* ===================== ABOUT US & OUR TEAM CLICKABLE SECTIONS ===================== */}
+      {/* ===== ABOUT US & OUR TEAM ===== */}
       <div
         style={{ cursor: 'pointer' }}
         onClick={() => {
@@ -366,7 +363,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
       
 
         {/* OUR TEAM SECTION */}
@@ -387,7 +383,7 @@ export default function Home() {
         </section>
       </div>
 
-      {/* ===================== TESTIMONIALS SECTION ===================== */}
+      {/* ===== TESTIMONIALS SECTION ===== */}
       <section id="reviews" className={styles.testimonialsSection}>
         <div className={styles.testimonialsHeader}>
           <h2>What Our Clients Say</h2>
@@ -432,7 +428,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== CONTACT US SECTION ===================== */}
+      {/* ===== CONTACT US SECTION ===== */}
       <section id="contact" className={styles.contactSection}>
         <div className={styles.contactFlexRow}>
           {/* Left: Contact Details */}
@@ -487,7 +483,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== SCROLL UP BUTTON ===================== */}
+      {/* ===== SCROLL UP BUTTON ===== */}
       <ScrollUpButton />
     </div>
   );
