@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // ===== Assets =====
-import signage from '../../assets/images/finalimage.jpg';
+import signage from '../../assets/images/Final-image-raifuti.jpg';
 import icedCaramelMacchiato from '../../assets/images/IcedCaramelMacchiato.jpg';
 import cappuccino from '../../assets/images/Cappuccino.jpg';
 import tiramisucake from '../../assets/images/tiramisucake.jpg';
@@ -322,12 +322,12 @@ export default function Home() {
       {/* ===== PROMO SECTION ===== */}
       <div id="promotions" className={styles.promoSection}>
         <div className={styles.promoTextCol}>
-          <div className={styles.promoTitleMain}>MATCHA</div>
-          <div className={styles.promoTitleSub}>FUSION</div>
+          <div className={styles.promoTitleMain}>Caramel Latte</div>
+          <div className={styles.promoTitleSub}>Milk Tea</div>
           <div className={styles.promoDivider} />
-          <div className={styles.promoPrice}>$5.99</div>
+          <div className={styles.promoPrice}>₱ 100.00 </div>
           <div className={styles.promoDesc}>
-            The Matcha & Espresso Fusion offers a surprising and delightful combination of premium matcha with rich creamy notes and natural sweetness, mixed with the signature espresso for a complete taste.
+            The Caramel Latte offers a surprising and delightful combination of premium caramel with rich creamy notes and natural sweetness, mixed with the signature espresso for a complete taste.
           </div>
         </div>
         <div className={styles.promoImageCol}>

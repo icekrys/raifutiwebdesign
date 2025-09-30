@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './About.module.css';
-import signage from '../../assets/images/finalimage.jpg';
+import signage from '../../assets/images/Final-image-raifuti.jpg';
 
 // ===================== SCROLL UP BUTTON =====================
 function ScrollUpButton() {

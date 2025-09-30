@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Menu.module.css';
-import signage from '../../assets/images/finalimage.jpg';
+import signage from '../../assets/images/Final-image-raifuti.jpg';
 import icedCaramelMacchiato from '../../assets/images/IcedCaramelMacchiato.jpg';
 import cappuccino from '../../assets/images/Cappuccino.jpg';
 import tiramisucake from '../../assets/images/tiramisucake.jpg';

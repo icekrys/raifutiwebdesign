@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Contact.module.css';
-import signage from '../../assets/images/finalimage.jpg';
+import signage from '../../assets/images/Final-image-raifuti.jpg';
 import phone from '../../assets/icons/call2.jpg';
 import email from '../../assets/icons/email1.jpg';
 import location from '../../assets/icons/location.jpg';
