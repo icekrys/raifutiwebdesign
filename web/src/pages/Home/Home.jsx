@@ -318,7 +318,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-
+      
       {/* ===== PROMO SECTION ===== */}
       <div id="promotions" className={styles.promoSection}>
         <div className={styles.promoTextCol}>
