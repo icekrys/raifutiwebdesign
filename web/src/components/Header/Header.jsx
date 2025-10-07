@@ -3,7 +3,11 @@ import styles from './Header.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+<<<<<<< HEAD
 import logo from '../../assets/images/raifutilogo.png';
+=======
+import logo from '../../assets/images/raifutilogo1.jpg';
+>>>>>>> f793f28 (Second push)
 
 
 export default function Header() {
@@ -33,7 +37,11 @@ export default function Header() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <header className={styles.header}>
+=======
+    <header className={`${styles.header} ${!showNav ? styles.hideNav : ''}`}>
+>>>>>>> f793f28 (Second push)
       <nav className={styles.nav}>
         <div className={styles.navLeft}>
           <div className={`${styles.logoContainer} ${!showNav ? styles.hideNav : ''}`}>
@@ -83,12 +91,15 @@ export default function Header() {
             })}
           </div>
         </div>
+<<<<<<< HEAD
         <div className={`${styles.searchContainer} ${!showNav ? styles.hideNav : ''}`}>
           <svg className={styles.searchIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <input type="text" className={styles.searchBar} placeholder="Search..." />
         </div>
+=======
+>>>>>>> f793f28 (Second push)
       </nav>
     </header>
   );

@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Contact.module.css';
 import signage from '../../assets/images/Final-image-raifuti.jpg';
+<<<<<<< HEAD
+=======
+import milkTeaSignage from '../../assets/images/Milk_Tea.jpg';
+>>>>>>> f793f28 (Second push)
 import phone from '../../assets/icons/call2.jpg';
 import email from '../../assets/icons/email1.jpg';
 import location from '../../assets/icons/location.jpg';
 import Footer from '../../components/Footer/Footer';
 
+<<<<<<< HEAD
+=======
+// ===== Static Data =====
+const signageSectionData = {
+  title: 'Boba & Beyond',
+  subtitle: 'Sip happiness, taste the magic, and smile with every drink!',
+  description: 'At Raifuti, we blend coffee, tea, and bubbles into unforgettable moments',
+};
+
+>>>>>>> f793f28 (Second push)
 // ===================== SCROLL UP BUTTON =====================
 function ScrollUpButton() {
   const [visible, setVisible] = useState(false);
@@ -33,10 +47,29 @@ function ScrollUpButton() {
 const Contact = () => {
   return (
     <div className={styles.contactPage}>
+<<<<<<< HEAD
       {/* ===================== HERO SECTION ===================== */}
       <section className={styles.heroSection}>
         <img src={signage} alt="Contact Us" className={styles.heroImage} />
         <h1 className={styles.heroTitle}>Contact Us</h1>
+=======
+      {/* ===================== SIGNAGE HERO SECTION ===================== */}
+      <section className={styles.signageHeroSection}>
+        <div id="contact" className={styles.heroImageWrapper}>
+          <img src={signage} alt="Contact Us" className={styles.heroImage} />
+          <div className={styles.signageHeroContent}>
+            <h1 className={styles.signageHeroTitle}>{signageSectionData.title}</h1>
+            <h2 className={styles.signageHeroSubtitle}>{signageSectionData.subtitle}</h2>
+            <p className={styles.signageHeroDesc}>{signageSectionData.description}</p>
+            <button className={styles.promoButton}>
+              <span className={styles.promoButtonText}>Contact Us</span>
+            </button>
+          </div>
+          <div className={styles.signageHeroImageContainer}>
+            <img src={milkTeaSignage} alt="Milk Tea" className={styles.signageHeroImageDisplay} />
+          </div>
+        </div>
+>>>>>>> f793f28 (Second push)
       </section>
 
       {/* ===================== CONTACT US SECTION ===================== */}

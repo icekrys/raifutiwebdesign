@@ -6,13 +6,21 @@
 /* ===================== HEADER ===================== */
 .header {
   width: 100%;
+<<<<<<< HEAD
   background: transparent;
+=======
+  background: #6A0E0C;
+>>>>>>> f793f28 (Second push)
   padding: 24px 0px 22px;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
+<<<<<<< HEAD
   box-shadow: none;
+=======
+  box-shadow: 0 2px 12px rgba(106, 14, 12, 0.3);
+>>>>>>> f793f28 (Second push)
   transition: background 0.3s, box-shadow 0.3s;
 }
 
@@ -51,10 +59,20 @@
   align-items: center;
 }
 .logoImg {
+<<<<<<< HEAD
   height: 44px;
   width: auto;
   object-fit: contain;
   margin-right: 10px;
+=======
+  height: 110px;
+  width: 110px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-left: -10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+>>>>>>> f793f28 (Second push)
   filter: drop-shadow(0 2px 8px rgba(140,16,7,0.10));
   background: transparent;
 }
@@ -66,11 +84,20 @@
   justify-content: center;
   align-items: center;
   position: relative;
+<<<<<<< HEAD
   right: 40px;
   opacity: 1;
   visibility: visible;
   letter-spacing: 2.5px;
   transition: opacity 0.3s, visibility 0.3s;
+=======
+  right: 20px;
+  opacity: 1;
+  visibility: visible;
+  letter-spacing: 1.5px;
+  transition: opacity 0.3s, visibility 0.3s;
+  gap: 8px;
+>>>>>>> f793f28 (Second push)
 }
 .hideNav {
   opacity: 0;
@@ -80,6 +107,7 @@
 
 .navButton {
   text-decoration: none;
+<<<<<<< HEAD
   color: #8C1007;
   background: none;
   border: none;
@@ -87,16 +115,35 @@
   position: relative;
   transition: color 0.2s, background 0.2s;
   height: 44px;
+=======
+  color:  #ffffff;
+  color:6A0E0C;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 40px;
+>>>>>>> f793f28 (Second push)
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+<<<<<<< HEAD
   letter-spacing: 2.5px;
   padding: 0px 30px 0px 0px;
+=======
+  letter-spacing: 1.5px;
+  padding: 0px 20px;
+  margin: 0px 4px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+>>>>>>> f793f28 (Second push)
 }
 .navButtonText {
   position: relative;
   display: inline-block;
+<<<<<<< HEAD
   font-size: 18px;
   font-family: 'League Spartan', sans-serif;
 }
@@ -153,6 +200,28 @@
   font-family: 'League Spartan', sans-serif;
   color: #8C1007;
   padding: 0 4px;
+=======
+  font-size: 0.95rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.navButton:hover {
+  color: #8C1007;
+  background: rgba(227, 198, 168, 0.9);
+  border-color: rgba(227, 198, 168, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(227, 198, 168, 0.15);
+}
+.navButton.active {
+  color: #8C1007;
+  background: linear-gradient(135deg, #ecd6bf 0%, #F5E6D3 100%);
+  border-color: #E3C6A8;
+
+}
+.navButton.active .navButtonText {
+  font-weight: 600;
+>>>>>>> f793f28 (Second push)
 }
 
 /* ===================== HERO OVERLAY (for homepage hero, not header) ===================== */

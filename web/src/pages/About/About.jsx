@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import styles from './About.module.css';
+<<<<<<< HEAD
 import signage from '../../assets/images/Final-image-raifuti.jpg';
+=======
+import signage from '../../assets/images/Milk_Tea.jpg';
+
+// ===== Static Data =====
+const signageSectionData = {
+  title: 'About Us',
+  subtitle: 'Discover our story, passion, and commitment to excellence',
+  description: 'At Raifuti, we blend tradition with innovation to create memorable experiences',
+};
+>>>>>>> f793f28 (Second push)
 
 // ===================== SCROLL UP BUTTON =====================
 function ScrollUpButton() {
@@ -27,12 +38,43 @@ function ScrollUpButton() {
 
 // ===================== ABOUT PAGE =====================
 export default function About() {
+<<<<<<< HEAD
   return (
     <div className={styles.aboutPage}>
       {/* ===================== HERO SECTION ===================== */}
       <section className={styles.heroSection}>
         <img src={signage} alt="About Us" className={styles.heroImage} />
         <h1 className={styles.heroTitle}>About Us</h1>
+=======
+  const handlePromoButtonClick = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  return (
+    <div className={styles.aboutPage}>
+      {/* ===================== SIGNAGE HERO SECTION ===================== */}
+      <section className={styles.signageHeroSection}>
+        <div id="home" className={styles.heroImageWrapper}>
+          <img src={signage} alt="About Us" className={styles.heroImage} />
+          <div className={styles.signageHeroContent}>
+            <h1 className={styles.signageHeroTitle}>{signageSectionData.title}</h1>
+            <h2 className={styles.signageHeroSubtitle}>{signageSectionData.subtitle}</h2>
+            <p className={styles.signageHeroDesc}>{signageSectionData.description}</p>
+            <button className={styles.promoButton} onClick={handlePromoButtonClick}>
+              <span className={styles.promoButtonText}>Learn More</span>
+            </button>
+          </div>
+          <div className={styles.signageHeroImageContainer}>
+            <img src={signage} alt="About Raifuti" className={styles.signageHeroImageDisplay} />
+          </div>
+        </div>
+>>>>>>> f793f28 (Second push)
       </section>
 
       {/* ===================== ABOUT US SECTION ===================== */}

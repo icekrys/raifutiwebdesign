@@ -3,18 +3,31 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+<<<<<<< HEAD
 import { motion } from 'motion/react';
+=======
+>>>>>>> f793f28 (Second push)
 import styles from './Home.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 // ===== Assets =====
+<<<<<<< HEAD
 import signage from '../../assets/images/Final-image-raifuti.jpg';
 import icedCaramelMacchiato from '../../assets/images/IcedCaramelMacchiato.jpg';
 import cappuccino from '../../assets/images/Cappuccino.jpg';
 import tiramisucake from '../../assets/images/tiramisucake.jpg';
 import caramelapplecake from '../../assets/images/caramelapplecake.jpg';
 import CortadoCoffee from '../../assets/images/CortadoCoffee.jpg';
+=======
+import signage from '../../assets/images/Milk_Tea.jpg';
+import milktea1 from '../../assets/images/milktea/Classic Milk Tea.png';
+import milktea2 from '../../assets/images/milktea/Matcha Tea.png';
+import milktea3 from '../../assets/images/milktea/Strawberry Tea.png';
+import generatedmilktea from '../../assets/images/milktea/Classic Milk Tea.png';
+import generatedmilktea1 from '../../assets/images/milktea/Wintermelo Milk Tea.png';
+import generatedmilktea2 from '../../assets/images/milktea/Brown Sugar Milk Tea.png';
+>>>>>>> f793f28 (Second push)
 import coffee from '../../assets/icons/coffeea.png';
 import phone from '../../assets/icons/call2.jpg';
 import email from '../../assets/icons/email1.jpg';
@@ -24,13 +37,20 @@ import desserts from '../../assets/icons/cake2.png';
 
 // ===== Static Data =====
 const signageSectionData = {
+<<<<<<< HEAD
   title: 'Welcome to Raifuti',
   subtitle: 'Your Cozy Coffee Haven',
   description: 'Enjoy our signature blends and delicious desserts in a relaxing atmosphere.',
+=======
+  title: 'Boba & Beyond',
+  subtitle: 'Sip happiness, taste the magic, and smile with every drink!',
+  description: 'At Raifuti, we blend coffee, tea, and bubbles into unforgettable moments',
+>>>>>>> f793f28 (Second push)
 };
 
 const menuBoxes = [
   {
+<<<<<<< HEAD
     name: 'Americano',
     image: cappuccino,
     prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
@@ -65,37 +85,99 @@ const menuBoxes = [
     image: tiramisucake,
     prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
     description: 'Classic Italian dessert with coffee and mascarpone.',
+=======
+    name: 'Classic Milk Tea',
+    image: milktea1,
+    prices: { S: '₱80.00', M: '₱100.00', L: '₱120.00' },
+    description: 'Traditional milk tea with rich black tea and creamy milk.',
+  },
+  {
+    name: 'Matcha Milk Tea',
+    image: milktea2,
+    prices: { S: '₱90.00', M: '₱110.00', L: '₱130.00' },
+    description: 'Creamy taro-flavored milk tea with a sweet purple taste.',
+  },
+  {
+    name: 'Strawberry Milk Tea',
+    image: milktea3,
+    prices: { S: '₱95.00', M: '₱115.00', L: '₱135.00' },
+    description: 'Rich strawberry flavor with fresh milk and chewy pearls.',
+  },
+  {
+    name: 'Thai Milk Tea',
+    image: generatedmilktea,
+    prices: { S: '₱85.00', M: '₱105.00', L: '₱125.00' },
+    description: 'Authentic Thai tea with condensed milk and spices.',
+  },
+  {
+    name: 'Matcha Milk Tea',
+    image: generatedmilktea1,
+    prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
+    description: 'Premium Japanese matcha with smooth milk blend.',
+  },
+  {
+    name: 'Honeydew Milk Tea',
+    image: generatedmilktea2,
+    prices: { S: '₱90.00', M: '₱110.00', L: '₱130.00' },
+    description: 'Refreshing honeydew melon flavor with creamy milk.',
+>>>>>>> f793f28 (Second push)
   },
 ];
 
 const containerBoxMenus = [
   {
     name: 'Mocha Frappe',
+<<<<<<< HEAD
     image: require('../../assets/images/frappe1.jpg'),
+=======
+    image: require('../../assets/images/coffee/affogato.png'),
+>>>>>>> f793f28 (Second push)
     description: 'Chilled espresso with chocolate and cream.',
     prices: { S: '₱110.00', M: '₱130.00', L: '₱150.00' },
   },
   {
     name: 'Mango Supreme Cake',
+<<<<<<< HEAD
     image: require('../../assets/images/mangosupremecake.jpg'),
+=======
+    image: require('../../assets/images/cake/chocolate.png'),
+>>>>>>> f793f28 (Second push)
     description: 'A tropical delight with fresh mangoes.',
     prices: { S: '₱120.00', M: '₱150.00', L: '₱180.00' },
   },
   {
     name: 'Death by Chocolate Cake',
+<<<<<<< HEAD
     image: require('../../assets/images/deathbychocolatecake.jpg'),
+=======
+    image: require('../../assets/images/milktea/Strawberry Tea.png'),
+>>>>>>> f793f28 (Second push)
     description: 'Rich chocolate cake for chocolate lovers.',
     prices: { S: '₱130.00', M: '₱160.00', L: '₱190.00' },
   },
   {
     name: 'Blueberry Cream Cheese',
+<<<<<<< HEAD
     image: require('../../assets/images/blueberrycreamcheese.jpg'),
+=======
+    image: require('../../assets/images/milktea/Taro Tea.png'),
+>>>>>>> f793f28 (Second push)
     description: 'Moist muffin with blueberry and cream cheese.',
     prices: { S: '₱70.00', M: '₱90.00', L: '₱110.00' },
   },
   {
     name: 'Iced Caramel Macchiato',
+<<<<<<< HEAD
     image: icedCaramelMacchiato,
+=======
+    image: require('../../assets/images/milktea/Thai Tea.png'),
+    description: 'Signature drink with espresso, vanilla, milk, caramel.',
+    prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
+  },
+   {
+    name: 'Mango Supreme Cake',
+    image: require('../../assets/images/cake/mango.png'),
+>>>>>>> f793f28 (Second push)
     description: 'Signature drink with espresso, vanilla, milk, caramel.',
     prices: { S: '₱100.00', M: '₱120.00', L: '₱140.00' },
   },
@@ -113,7 +195,11 @@ const blogCards = [
     description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
   },
   {
+<<<<<<< HEAD
     image: require('../../assets/images/signage.jpg'),
+=======
+    image: require('../../assets/images/raifutiemployees.jpg'),
+>>>>>>> f793f28 (Second push)
     title: 'Coffee Connoisseur',
     description: `Jim Karlanda, a coffee enthusiast based in the North West of England. Jim is the founder, author, and chief brewer behind CoffeeKingClub, The CoffeeWeek, and The Coffee Way. You can channel his best insight being asked many times, 'I’m not from Yorkshire.'`,
   },
@@ -139,6 +225,7 @@ function ScrollUpButton() {
   );
 }
 
+<<<<<<< HEAD
 function MenuBox({ name, image, prices, description, onMenuBoxBottomRowClick }) {
   const [selectedSize, setSelectedSize] = useState('L');
   return (
@@ -148,11 +235,33 @@ function MenuBox({ name, image, prices, description, onMenuBoxBottomRowClick }) 
       <div className={styles.menuBoxInfo}>
         <div className={styles.menuBoxName}>{name}</div>
         <div className={styles.menuBoxDesc}>{description}</div>
+=======
+function MenuBox({ name, image, prices, description, onMenuBoxBottomRowClick, isCarousel = false }) {
+  const [selectedSize, setSelectedSize] = useState('L');
+  
+  const boxClass = isCarousel ? styles.carouselMenuBox : styles.menuBox;
+  const infoClass = isCarousel ? styles.carouselMenuBoxInfo : styles.menuBoxInfo;
+  const nameClass = isCarousel ? styles.carouselMenuBoxName : styles.menuBoxName;
+  const descClass = isCarousel ? styles.carouselMenuBoxDesc : styles.menuBoxDesc;
+  const priceClass = isCarousel ? styles.carouselMenuBoxPrice : styles.menuBoxPrice;
+  
+  return (
+    <div className={boxClass}>
+      <img src={image} alt={name} className={styles.menuImage} />
+      <div className={styles.boxPanel}></div>
+      <div className={infoClass}>
+        <div className={nameClass}>{name}</div>
+        <div className={descClass}>{description}</div>
+>>>>>>> f793f28 (Second push)
         <div
           className={styles.menuBoxBottomRow}
           onClick={onMenuBoxBottomRowClick}
         >
+<<<<<<< HEAD
           <div className={styles.menuBoxPrice}>
+=======
+          <div className={priceClass}>
+>>>>>>> f793f28 (Second push)
             {prices[selectedSize]}
           </div>
           <div className={styles.menuBoxSizes}>
@@ -189,6 +298,19 @@ export default function Home() {
     }
   };
 
+<<<<<<< HEAD
+=======
+  const handlePromoButtonClick = () => {
+    const promoSection = document.getElementById('promotions');
+    if (promoSection) {
+      promoSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+>>>>>>> f793f28 (Second push)
   return (
     <div className={styles.container}>
       {/* ===== HERO SECTION ===== */}
@@ -199,6 +321,15 @@ export default function Home() {
             <h1 className={styles.signageHeroTitle}>{signageSectionData.title}</h1>
             <h2 className={styles.signageHeroSubtitle}>{signageSectionData.subtitle}</h2>
             <p className={styles.signageHeroDesc}>{signageSectionData.description}</p>
+<<<<<<< HEAD
+=======
+            <button className={styles.promoButton} onClick={handlePromoButtonClick}>
+              <span className={styles.promoButtonText}>Promo</span>
+            </button>
+          </div>
+          <div className={styles.signageHeroImageContainer}>
+            <img src={signage} alt="Milk Tea" className={styles.signageHeroImageDisplay} />
+>>>>>>> f793f28 (Second push)
           </div>
         </div>
       </section>
@@ -223,7 +354,11 @@ export default function Home() {
       <div className={styles.topCoffeeSaleOuterContainer}>
         <div className={styles.menuBoxContainer}>
           <div>
+<<<<<<< HEAD
             <span className={styles.topCoffeeSaleLabel}>Top Coffee Sale</span>
+=======
+            <span className={styles.topCoffeeSaleLabel}>TOP MILK TEA SALE</span>
+>>>>>>> f793f28 (Second push)
             <span className={styles.topCoffeeSaleSubLabel}>Your Favorite Blends at Unbeatable Prices</span>
           </div>
           <div className={styles.menusContainer}>
@@ -243,7 +378,11 @@ export default function Home() {
       {/* ===== TOP PRODUCT SALE (Carousel) ===== */}
       <section className={styles.containerBoxSection}>
         <div className={styles.bestSellersHeader}>
+<<<<<<< HEAD
           <h2 className={styles.sectionTitle}> Top Product Sale </h2>
+=======
+          <h2 className={styles.sectionTitle}> TOP PRODUCT SALE </h2>
+>>>>>>> f793f28 (Second push)
           <p className={styles.sectionDescription}>
             Customer favorites, tried and true!
           </p>
@@ -272,6 +411,10 @@ export default function Home() {
                   prices={item.prices}
                   description={item.description}
                   onMenuBoxBottomRowClick={handleMenuBoxBottomRowClick}
+<<<<<<< HEAD
+=======
+                  isCarousel={true}
+>>>>>>> f793f28 (Second push)
                 />
               </SwiperSlide>
             ))}
@@ -282,7 +425,11 @@ export default function Home() {
       {/* ===== OUR MENU SECTION ===== */}
       <div className={styles.ourMenuOuterContainer}>
         <section id="menu" className={styles.ourMenuSection}>
+<<<<<<< HEAD
           <h2 className={styles.ourMenuTitle}>Our Menu</h2>
+=======
+          <h2 className={styles.ourMenuTitle}>OUR MENU</h2>
+>>>>>>> f793f28 (Second push)
           <p className={styles.ourMenuDescription}>Explore our delicious offerings!</p>
           <div className={styles.ourMenuGrid}>
             <div className={styles.ourMenuRow}>
@@ -297,7 +444,11 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.ourMenuRow}>
+<<<<<<< HEAD
               {containerBoxMenus.slice(0, 3).map((item, idx) => (
+=======
+              {containerBoxMenus.slice(3, 6).map((item, idx) => (
+>>>>>>> f793f28 (Second push)
                 <MenuBox
                   key={idx + 3}
                   name={item.name}
@@ -307,7 +458,11 @@ export default function Home() {
                 />
               ))}
             </div>
+<<<<<<< HEAD
             <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+=======
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginTop: '16px' }}>
+>>>>>>> f793f28 (Second push)
               <button
                 className={styles.viewMoreButton}
                 onClick={() => navigate('/menu')}
@@ -337,8 +492,11 @@ export default function Home() {
             className={styles.promoImage}
           />
         </div>
+<<<<<<< HEAD
         <div className={styles.promoCircleLeft} />
         <div className={styles.promoCircleRight} />
+=======
+>>>>>>> f793f28 (Second push)
       </div>
 
       {/* ===== ABOUT US & OUR TEAM ===== */}

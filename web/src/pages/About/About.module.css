@@ -1,12 +1,36 @@
 /* ===================== GLOBAL & FONTS ===================== */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes signageFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shinyText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+>>>>>>> f793f28 (Second push)
 
 /* ========== About Page ========== */
 .aboutPage {
   width: 100%;
 }
 
+<<<<<<< HEAD
   /* 1st Part - Hero Section */
 .heroSection {
   position: relative;
@@ -35,6 +59,161 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   width: 100%;
   padding: 0 2rem;
+=======
+/* ===================== HERO SECTION ===================== */
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ===================== SIGNAGE HERO SECTION ===================== */
+.signageHeroSection {
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+  position: relative;
+  background: #6A0E0C;
+}
+.heroImage {
+  display: none;
+}
+
+.signageHeroContent {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  margin-bottom: 10rem;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #fff;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 600px;
+  align-items: flex-start;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 350px;
+  border: none;
+}
+
+.signageHeroImageContainer {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signageHeroImageDisplay {
+  width: 550px;
+  height: 550px;
+  object-fit: contain;
+  margin-bottom: 2.3rem;
+  animation: signageFloat 3s ease-in-out infinite;
+}
+
+.signageHeroTitle {
+  font-size: 1.9rem;
+  margin-bottom: 0.5em;
+  font-family: "Miniver", sans-serif;
+  letter-spacing: 1px;
+  text-shadow: none;
+  font-weight: 700;
+  color: #ff9500;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #ff9500 15%, #ffff99 35%, #ffffff 50%, #ffff99 65%, #ff9500 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 6s ease-in-out infinite;
+}
+
+.signageHeroSubtitle {
+  font-size: 2.9rem;
+  font-family: 'League Spartan', sans-serif;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #ffffff 15%, #ffcccc 35%, #ffffcc 50%, #ffcccc 65%, #ffffff 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 8s ease-in-out infinite;
+}
+
+.signageHeroDesc {
+  font-size: 1.3rem;
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: none;
+  font-weight: 400;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.7) 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 10s ease-in-out infinite;
+}
+
+/* ===================== PROMO BUTTON ===================== */
+.promoButton {
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(227, 198, 168, 0.1);
+  border: 1px solid rgba(227, 198, 168, 0.2);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  letter-spacing: 1.5px;
+  padding: 0px 20px;
+  margin: 1.5rem 0 0 0;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  width: fit-content;
+}
+
+.promoButtonText {
+  position: relative;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.promoButton:hover {
+  color: #8C1007;
+  background: rgba(227, 198, 168, 0.9);
+  border-color: rgba(227, 198, 168, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(227, 198, 168, 0.15);
+}
+
+.promoButton:focus {
+  outline: none;
+  color: #8C1007;
+  background: linear-gradient(135deg, #ecd6bf 0%, #F5E6D3 100%);
+  border-color: #E3C6A8;
+>>>>>>> f793f28 (Second push)
 }
 
 /* ========== About Us Section ========== */
@@ -46,6 +225,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  margin-top: 80px;
+>>>>>>> f793f28 (Second push)
   margin-bottom: 40px;
 }
 .containerBlackImgWrapper {
@@ -53,7 +236,11 @@
   align-items: center;
   width: 100%;
   padding: 0rem 1.5rem;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+=======
+
+>>>>>>> f793f28 (Second push)
 }
 .containerBlackImg {
   max-width: 650px;
@@ -98,7 +285,10 @@
   border-radius: 24px;
   margin: 4.8rem 0rem 4.8rem 0rem;
   gap: 3rem;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+=======
+>>>>>>> f793f28 (Second push)
 }
 .containerBoxImage {
   flex: 1;

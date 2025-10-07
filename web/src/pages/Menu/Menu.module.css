@@ -25,6 +25,205 @@
   opacity: 0;
   pointer-events: none;
 }
+<<<<<<< HEAD
+=======
+
+/* ===================== ICONS SECTION - DOCK COMPONENT ===================== */
+.iconsSectionMenu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+  margin: 2rem 0rem 2rem 0rem ;
+  background: #fff;
+  perspective: 1000px;
+}
+
+.iconItemMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transform-origin: bottom center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.iconItemMenu:hover {
+  background: rgba(64, 47, 35, 0.05);
+}
+
+/* Active state for selected category */
+.iconItemActive {
+  background: rgba(64, 47, 35, 0.1) !important;
+  transform: scale(1.05) !important;
+}
+
+.iconItemActive p {
+  color: #2E1A15 !important;
+  font-weight: 700 !important;
+}
+
+/* Active indicator dot */
+.activeIndicator {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #C1282D;
+  border-radius: 50%;
+  animation: pulseIndicator 2s infinite;
+}
+
+@keyframes pulseIndicator {
+  0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.7; transform: translateX(-50%) scale(1.2); }
+}
+
+.iconImageMenu {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.iconItemMenu:hover .iconImageMenu {
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.15)) brightness(1.1);
+  border-radius: 12px;
+}
+
+.iconItemActive .iconImageMenu {
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2)) brightness(1.15) !important;
+  border-radius: 12px;
+}
+
+.iconItemMenu p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #402F23;
+  text-align: center;
+  margin: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconItemMenu:hover p {
+  opacity: 1;
+  color: #2E1A15;
+  transform: translateY(-2px);
+  font-weight: 700;
+}
+
+/* Category header styles */
+.categoryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 30px 0;
+  padding: 20px;
+  background: rgba(64, 47, 35, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(64, 47, 35, 0.1);
+}
+
+.categoryTitle {
+  font-family: 'Figtree', serif;
+  font-size: 1.8rem;
+  color: #4C2720;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.showAllButton {
+  background: #C1282D;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.showAllButton:hover {
+  background: #8C1007;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(193, 40, 45, 0.3);
+}
+
+/* No items message */
+.noItemsMessage {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Responsive design for dock */
+@media (max-width: 768px) {
+  .iconsSectionMenu {
+    gap: 15px;
+    padding: 25px 0px 35px 0px;
+  }
+  
+  .iconImageMenu {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .iconItemMenu p {
+    font-size: 0.8rem;
+  }
+
+  .categoryHeader {
+    margin: 15px 0 25px 0;
+    padding: 15px;
+  }
+
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .iconsSectionMenu {
+    gap: 10px;
+    padding: 20px 0px 30px 0px;
+  }
+  
+  .iconImageMenu {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .iconItemMenu p {
+    font-size: 0.75rem;
+  }
+
+  .categoryHeader {
+    margin: 10px 0 20px 0;
+    padding: 12px;
+  }
+
+  .categoryTitle {
+    font-size: 1.3rem;
+  }
+}
+
+>>>>>>> f793f28 (Second push)
 .menuSectionBrown {
 	color: #7a2e1b;
 }
@@ -63,8 +262,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+<<<<<<< HEAD
 	margin: 5.8rem 0rem 5.8rem 0rem;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+=======
+	margin: 2rem 0rem 2rem 0rem;
+>>>>>>> f793f28 (Second push)
 }
 .secondSectionContent {
 	max-width: 800px;
@@ -74,7 +277,10 @@
 .secondSectionContent h2 {
 	font-size: 2.5rem;
 	color: #4C2720;
+<<<<<<< HEAD
 	margin-bottom: 1rem;
+=======
+>>>>>>> f793f28 (Second push)
 	font-family: 'Figtree', serif;
 }
 .secondSectionContent p {
@@ -84,6 +290,28 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+<<<<<<< HEAD
+=======
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes silkFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+>>>>>>> f793f28 (Second push)
 .containerBoxSection {
 	width: 100%;
 	min-height: 800px;
@@ -93,12 +321,21 @@
 	justify-content: center;
 	margin-bottom: 40px;
 	position: relative;
+<<<<<<< HEAD
 	background-image: url('../../assets/images/coffeepin.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	z-index: 1;
 }
+=======
+	background: linear-gradient(-45deg, #6A0E0C, #C1282D, #A61E1E, #8B1A1A, #4A0B09, #6A0E0C);
+	background-size: 400% 400%;
+	animation: silkFlow 10s ease-in-out infinite;
+	z-index: 1;
+}
+
+>>>>>>> f793f28 (Second push)
 .containerBoxSection > * {
 	position: relative;
 	z-index: 3;
@@ -107,7 +344,11 @@
 	content: "";
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
+<<<<<<< HEAD
 	background: rgba(0,0,0,0.55);
+=======
+	background: rgba(0,0,0,0.25);
+>>>>>>> f793f28 (Second push)
 	z-index: 2;
 	pointer-events: none;
 }
@@ -126,6 +367,11 @@
 .sectionTitle {
 	font-family: 'Figtree', serif;
 	font-size: 2.5rem;
+<<<<<<< HEAD
+=======
+	font-weight: 800;
+	letter-spacing: 2px;
+>>>>>>> f793f28 (Second push)
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -153,6 +399,7 @@
 	max-width: 340px;
 	height: 420px;
 	max-height: 420px;
+<<<<<<< HEAD
 	background: #fff;
 	overflow: hidden;
 	box-shadow: 0 8px 24px rgba(0,0,0,0.13);
@@ -162,6 +409,16 @@
 }
 .menuBox:hover {
 	box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+=======
+	background: transparent;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+.menuBox:hover {	
+>>>>>>> f793f28 (Second push)
 	transform: translateY(-8px) scale(1.03);
 	z-index: 2;
 	cursor: pointer;
@@ -169,12 +426,20 @@
 .menuImage {
 	width: 100%;
 	height: 260px;
+<<<<<<< HEAD
 	object-fit: cover;
 	border-radius: 10px;
 	display: block;
 }
 .menuBoxInfo {
 	background: #fff;
+=======
+	object-fit: contain;
+	display: block;
+}
+.menuBoxInfo {
+	background: transparent;
+>>>>>>> f793f28 (Second push)
 	padding: 1.1rem 1.3rem 1.2rem 1.3rem;
 	display: flex;
 	flex-direction: column;
@@ -197,6 +462,7 @@
 }
 .menuBoxDesc {
 	font-size: 1.1rem;
+<<<<<<< HEAD
 	color: #4A3B3B;
 	font-family: 'League Spartan', sans-serif;
 	text-align: left;
@@ -205,15 +471,35 @@
 .menuBoxName {
 	font-size: 1.5rem;
 	color: #4C2720;
+=======
+	color: #ffffff;
+	font-family: 'League Spartan', sans-serif;
+	text-align: left;
+	margin-bottom: 0.7rem;
+	line-height: 1.3;
+}
+.menuBoxName {
+	font-size: 1.5rem;
+	color: #ffffff;
+>>>>>>> f793f28 (Second push)
 	margin: 0 0 0.2rem 0;
 	font-family: 'Figtree', serif;
 	letter-spacing: 0.5px;
 	text-align: left;
+<<<<<<< HEAD
 }
 .menuBoxPrice {
 	font-size: 1.325rem;
 	font-weight: bold;
 	color: #2E1A15;
+=======
+	line-height: 1.2;
+}
+.menuBoxPrice {
+	font-size: 1.35rem;
+	font-weight: bold;
+	color: #ffff99;
+>>>>>>> f793f28 (Second push)
 	font-family: 'League Spartan', sans-serif;
 	letter-spacing: 0.5px;
 }
@@ -223,7 +509,11 @@
 	gap: 0.5rem;
 }
 .sizeButton {
+<<<<<<< HEAD
 	background-color: #C1282D;
+=======
+	background-color: #6A0E0C;
+>>>>>>> f793f28 (Second push)
 	color: #fff;
 	padding: 4px 12px;
 	font-size: 0.85rem;
@@ -245,3 +535,123 @@
 	border-color: #6B4F3D;
 	box-shadow: 0 0 0 3px rgba(108, 64, 52, 0.3);
 }
+<<<<<<< HEAD
+=======
+
+/* ===================== REGULAR MENU GRID STYLES (Original Design) ===================== */
+.menuGridBox {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	width: 340px;
+	min-width: 340px;
+	max-width: 340px;
+	height: 420px;
+	max-height: 420px;
+	background: #fff;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menuGridBox:hover {	
+	transform: translateY(-8px) scale(1.03);
+	z-index: 2;
+	cursor: pointer;
+}
+
+.menuGridImage {
+	width: 100%;
+	height: 260px;
+	object-fit: contain;
+	display: block;
+}
+
+.menuGridBoxInfo {
+	background: #fff;
+	padding: 1.1rem 1.3rem 1.2rem 1.3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	min-height: 140px;
+	box-sizing: border-box;
+	position: relative;
+	top: 0;
+	flex: 1 1 auto;
+	justify-content: flex-start;
+}
+
+.menuGridBoxBottomRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: auto;
+	gap: 0.5rem;
+	min-height: 40px;
+}
+
+.menuGridBoxDesc {
+	font-size: 1.1rem;
+	color: #4A3B3B;
+	font-family: 'League Spartan', sans-serif;
+	text-align: left;
+	margin-bottom: 0.7rem;
+	line-height: 1.3;
+}
+
+.menuGridBoxName {
+	font-size: 1.5rem;
+	color: #4C2720;
+	margin: 0 0 0.2rem 0;
+	font-family: 'Figtree', serif;
+	letter-spacing: 0.5px;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.menuGridBoxPrice {
+	font-size: 1.35rem;
+	font-weight: bold;
+	color: #2E1A15;
+	font-family: 'League Spartan', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+.menuGridBoxSizes {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
+.menuGridSizeButton {
+	background-color: #6A0E0C;
+	color: #fff;
+	padding: 4px 12px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	border-radius: 8px;
+	border: none;
+	transition: background 0.2s, transform 0.2s;
+}
+
+.menuGridSizeButton.active {
+	background-color: #4C2720;
+	color: #fff;
+}
+
+.menuGridSizeButton:hover {
+	background-color: #8C1007;
+	transform: scale(1.05);
+}
+
+.menuGridSizeButton:focus {
+	outline: none;
+	border-color: #6B4F3D;
+	box-shadow: 0 0 0 3px rgba(108, 64, 52, 0.3);
+}
+>>>>>>> f793f28 (Second push)

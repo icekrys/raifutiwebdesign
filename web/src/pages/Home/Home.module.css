@@ -57,11 +57,19 @@
 @keyframes fadeInDesc {
   0% {
     opacity: 0;
+<<<<<<< HEAD
     transform: translateY(10px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+=======
+    transform: translateY(10px);  
+  }
+  100% {
+    opacity: 1;  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);   transform: translateY(0);
+>>>>>>> f793f28 (Second push)
   }
 }
 @keyframes float {
@@ -75,9 +83,106 @@
   }
 }
 
+<<<<<<< HEAD
 /* ===================== GLOBAL & FONTS ===================== */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+=======
+@keyframes signageFloat {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-10px) scale(1.02);
+  }
+}
+
+@keyframes signagePulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+@keyframes signageGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 149, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(255, 149, 0, 0.6)) drop-shadow(0 0 35px rgba(255, 149, 0, 0.4));
+  }
+}
+
+@keyframes signageSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0px);
+  }
+}
+
+@keyframes signageFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shinyText {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes silkFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes promoImageFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-1deg);
+  }
+}
+
+/* ===================== GLOBAL & FONTS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+>>>>>>> f793f28 (Second push)
 html {
   scroll-behavior: smooth;
   font-family: 'League Spartan', sans-serif;
@@ -104,6 +209,7 @@ body {
   width: 100%;
   min-height: 600px;
   overflow: hidden;
+<<<<<<< HEAD
 }
 .heroImage {
   width: 100%;
@@ -111,11 +217,19 @@ body {
   display: block;
   filter: brightness(0.5); /* Darken the image */
   
+=======
+  position: relative;
+  background: #6A0E0C;
+}
+.heroImage {
+  display: none;
+>>>>>>> f793f28 (Second push)
 }
 
 .signageHeroContent {
   position: absolute;
   top: 50%;
+<<<<<<< HEAD
   left: 5vw;
   transform: translateY(-50%);
   background: rgba(0,0,0,0.45);
@@ -151,22 +265,163 @@ body {
   font-size: 1.15rem;
   font-family: 'League Spartan', sans-serif;
   line-height: 1.6;
+=======
+  left: 5%;
+  margin-bottom: 10rem;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #fff;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 600px;
+  align-items: flex-start;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 350px;
+  border: none;
+}
+
+.signageHeroImageContainer {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signageHeroImageDisplay {
+  width: 550px;
+  height: 550px;
+  object-fit: contain;
+  margin-bottom: 2.3rem;
+  animation: signageFloat 3s ease-in-out infinite;
+}
+
+.signageHeroTitle {
+  font-size: 1.9rem;
+  margin-bottom: 0.5em;
+  font-family: "Miniver", sans-serif;
+  letter-spacing: 1px;
+  text-shadow: none;
+  font-weight: 700;
+  color: #ff9500;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #ff9500 15%, #ffff99 35%, #ffffff 50%, #ffff99 65%, #ff9500 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 6s ease-in-out infinite;
+}
+
+.signageHeroSubtitle {
+  font-size: 2.9rem;
+  font-family: 'League Spartan', sans-serif;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #ffffff 15%, #ffcccc 35%, #ffffcc 50%, #ffcccc 65%, #ffffff 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 8s ease-in-out infinite;
+}
+
+.signageHeroDesc {
+  font-size: 1.3rem;
+  font-family: 'League Spartan', sans-serif;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: none;
+  font-weight: 400;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.7) 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 10s ease-in-out infinite;
+}
+
+/* ===================== PROMO BUTTON ===================== */
+.promoButton {
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(227, 198, 168, 0.1);
+  border: 1px solid rgba(227, 198, 168, 0.2);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  letter-spacing: 1.5px;
+  padding: 0px 20px;
+  margin: 1.5rem 0 0 0;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  width: fit-content;
+}
+
+.promoButtonText {
+  position: relative;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.promoButton:hover {
+  color: #8C1007;
+  background: rgba(227, 198, 168, 0.9);
+  border-color: rgba(227, 198, 168, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(227, 198, 168, 0.15);
+}
+
+.promoButton:focus {
+  outline: none;
+  color: #8C1007;
+  background: linear-gradient(135deg, #ecd6bf 0%, #F5E6D3 100%);
+  border-color: #E3C6A8;
+>>>>>>> f793f28 (Second push)
 }
 
 /* ===================== VIEW MORE BUTTON ===================== */
 
 .viewMoreButton {
   font-family: 'League Spartan', sans-serif;
+<<<<<<< HEAD
   background-color: #C1282D;
+=======
+  background-color: #6A0E0C;
+>>>>>>> f793f28 (Second push)
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   padding: 12px 32px;
   border: none;
+<<<<<<< HEAD
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(0,0,0,0.18), 0 1.5px 8px rgba(60,60,60,0.10);
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+=======
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+>>>>>>> f793f28 (Second push)
   margin-right: 8rem;
   margin-top: -30px;
 }
@@ -183,7 +438,11 @@ body {
   justify-content: center;
   gap: 60px;
   width: 100%;
+<<<<<<< HEAD
   padding: 40px 0px;
+=======
+  padding: 35px 0px;
+>>>>>>> f793f28 (Second push)
   background: #fff;
 }
 .iconItem {
@@ -194,8 +453,13 @@ body {
   transition: transform 0.5s cubic-bezier(.4,2,.6,1);
 }
 .iconImage {
+<<<<<<< HEAD
   width: 60px;
   height: 60px;
+=======
+  width: 55px;
+  height: 55px;
+>>>>>>> f793f28 (Second push)
   object-fit: cover;
   transition: filter 0.5s cubic-bezier(.4,2,.6,1);
 }
@@ -238,6 +502,7 @@ body {
   max-height: 420px;
   background: #fff;
   overflow: hidden;
+<<<<<<< HEAD
   box-shadow: 0 8px 24px rgba(0,0,0,0.13);
   margin: 0;
   padding: 0;
@@ -246,13 +511,27 @@ body {
 .menuBox:hover {
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   transform: translateY(-8px) scale(1.03);
+=======
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.menuBox:hover {
+  transform: translateY(-8px) scale(1.03);
+
+>>>>>>> f793f28 (Second push)
   z-index: 2;
   cursor: pointer;
 }
 .menuImage {
   width: 100%;
   height: 260px;
+<<<<<<< HEAD
   object-fit: cover;
+=======
+  object-fit: contain;
+>>>>>>> f793f28 (Second push)
   display: block;
 }
 .menuBoxInfo {
@@ -286,7 +565,11 @@ body {
 }
 .menuBoxName {
   font-size: 1.5rem;
+<<<<<<< HEAD
   color: #4C2720;
+=======
+  color: #6A0E0C;
+>>>>>>> f793f28 (Second push)
   margin: 0 0 0.2rem 0;
   font-family: 'Figtree', serif;
   letter-spacing: 0.5px;
@@ -305,10 +588,17 @@ body {
   gap: 0.5rem;
 }
 .sizeButton {
+<<<<<<< HEAD
   background-color: #C1282D;
   font-family: 'League Spartan', sans-serif;
   color: #fff;
   padding: 4px 12px 1px;
+=======
+  background-color: #6A0E0C;
+  font-family: 'League Spartan', sans-serif;
+  color: #fff;
+  padding: 4px 12px 4px ;
+>>>>>>> f793f28 (Second push)
   font-size: 0.85rem;
   border-radius: 8px;
   border: none;
@@ -325,11 +615,80 @@ body {
 .sizeButton:focus {
   outline: none;
   border-color: #6B4F3D;
+<<<<<<< HEAD
   box-shadow: 0 0 0 3px rgba(108, 64, 52, 0.3);
 }
 .topCoffeeSaleLabel {
   font-size: 2.5rem;
   color: #4C2720;
+=======
+}
+
+/* ===================== CAROUSEL MENU BOX STYLES (for TOP PRODUCT SALE) ===================== */
+.carouselMenuBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 340px;
+  min-width: 340px;
+  max-width: 340px;
+  height: 420px;
+  max-height: 420px;
+  background: transparent;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.carouselMenuBox:hover {
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+  cursor: pointer;
+}
+.carouselMenuBoxInfo {
+  background: transparent;
+  padding: 1.1rem 1.3rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 140px;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+.carouselMenuBoxName {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+  font-family: 'Figtree', serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.carouselMenuBoxDesc {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-family: 'League Spartan', sans-serif;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+.carouselMenuBoxPrice {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #ffff99;
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.topCoffeeSaleLabel {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000000;
+>>>>>>> f793f28 (Second push)
   font-family: 'Figtree', serif;
   display: block;
   text-align: center;
@@ -362,10 +721,16 @@ body {
   justify-content: center;
   margin-bottom: 40px;
   position: relative;
+<<<<<<< HEAD
   background-image: url('../../assets/images/coffeepin.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+=======
+  background: linear-gradient(-45deg, #6A0E0C, #C1282D, #A61E1E, #8B1A1A, #4A0B09, #6A0E0C);
+  background-size: 400% 400%;
+  animation: silkFlow 30s ease-in-out infinite;
+>>>>>>> f793f28 (Second push)
   z-index: 1;
 }
 .containerBoxSection > * {
@@ -376,13 +741,20 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+<<<<<<< HEAD
   background: rgba(0,0,0,0.55);
+=======
+  background: rgba(0,0,0,0.25);
+>>>>>>> f793f28 (Second push)
   z-index: 2;
   pointer-events: none;
 }
 .bestSellersHeader {
   text-align: center;
+<<<<<<< HEAD
   color: #fff;
+=======
+>>>>>>> f793f28 (Second push)
 }
 .sectionDescription {
     
@@ -394,6 +766,11 @@ body {
 .sectionTitle {
   font-family: 'Figtree', serif;
   font-size: 2.5rem;
+<<<<<<< HEAD
+=======
+  font-weight: 800;
+  letter-spacing: 2px;
+>>>>>>> f793f28 (Second push)
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -405,6 +782,7 @@ body {
 }
 
 /* ===================== PROMO SECTION ===================== */
+<<<<<<< HEAD
 .promoCircleLeft {
   position: absolute;
   left: -60px;
@@ -432,6 +810,11 @@ body {
 .promoDesc {
   font-size: 18px;
   color: #666;
+=======
+.promoDesc {
+  font-size: 18px;
+  color: #ffffff;
+>>>>>>> f793f28 (Second push)
   max-width: 480px;
   line-height: 1.6;
   font-family: 'League Spartan', sans-serif;
@@ -440,12 +823,18 @@ body {
 .promoDivider {
   height: 2px;
   width: 80px;
+<<<<<<< HEAD
   background: #4caf50;
   margin: 8px 0 24px 0;
+=======
+  background: #ff9500;
+  margin: 8px 0 20px 0;
+>>>>>>> f793f28 (Second push)
 }
 
 .promoImage {
   width: 480px;
+<<<<<<< HEAD
   height: 360px;
   object-fit: cover;
   border-radius: 24px;
@@ -453,6 +842,15 @@ body {
   background: #fff;
   border: 6px solid #e8f5e9;
   margin-left: -4rem;
+=======
+  height: 480px;
+  object-fit: cover;
+  border-radius: 24px;
+  background: #fff;
+  margin-left: -4rem;
+  animation: promoImageFloat 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+>>>>>>> f793f28 (Second push)
 }
 .promoImageCol {
   flex: 1;
@@ -464,14 +862,22 @@ body {
 .promoPrice {
   font-size: 32px;
   font-weight: 700;
+<<<<<<< HEAD
   color: #222;
   margin-bottom: 1em;
   animation: fadeInPrice 1.2s 0.6s both;
 }
+=======
+  color: #ffffff;
+  margin-bottom: 1em;
+  animation: fadeInPrice 1.2s 0.6s both;
+} 
+>>>>>>> f793f28 (Second push)
 .promoSection {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   background: #fff;
   border-radius: 24px;
   padding: 48px 32px 32px 32px;
@@ -481,6 +887,16 @@ body {
   position: relative;
   overflow: hidden;
   animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+=======
+  background: linear-gradient(-45deg, #6A0E0C, #A61E1E, #8B1A1A, #4A0B09, #6A0E0C);
+  background-size: 300% 300%;
+  padding: 32px 32px 32px 32px;
+  margin-top: 4.8rem;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1), silkFlow 30s ease-in-out infinite;
+>>>>>>> f793f28 (Second push)
 }
 .promoTextCol {
   flex: 1;
@@ -498,7 +914,11 @@ body {
   font-weight: 800;
   font-size: 56px;
   letter-spacing: 1px;
+<<<<<<< HEAD
   color: #222;
+=======
+  color: #ffffff;
+>>>>>>> f793f28 (Second push)
   margin-bottom: 0.2em;
   font-family: 'League Spartan', sans-serif;
   animation: fadeInTitle 1.2s 0.2s both;
@@ -506,11 +926,24 @@ body {
 .promoTitleSub {
   font-weight: 500;
   font-size: 36px;
+<<<<<<< HEAD
   color: #4caf50;
   font-style: italic;
   margin-bottom: 0.5em;
   font-family: 'League Spartan', sans-serif;
   animation: fadeInSub 1.2s 0.4s both;
+=======
+  color: #ff9500;
+  font-style: italic;
+  margin-bottom: 0.2em;
+  font-family: 'League Spartan', sans-serif;
+  background: linear-gradient(90deg, #ff9500 15%, #ffff99 35%, #ffffff 50%, #ffff99 65%, #ff9500 85%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInSub 1.2s 0.4s both, shinyText 3s ease-in-out infinite;
+>>>>>>> f793f28 (Second push)
 }
 
 /* ===================== ABOUT US SECTION ===================== */
@@ -537,14 +970,22 @@ body {
   align-items: center;
   width: 100%;
   padding: 0rem 1.5rem;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+=======
+>>>>>>> f793f28 (Second push)
 }
 
 /* Hover effect for About Us section */
 .containerBlackImgWrapper:hover {
+<<<<<<< HEAD
   box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
   transform: translateY(-6px) scale(1.02);
   transition: box-shadow 0.3s, transform 0.3s;
+=======
+  transform: translateY(-6px) scale(1.02);
+  transition: transform 0.3s;
+>>>>>>> f793f28 (Second push)
   cursor: pointer;
 }
 .containerBlackText {
@@ -583,15 +1024,23 @@ body {
   width: 100%;
   padding: 0rem 1.5rem;
   gap: 3rem;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+=======
+>>>>>>> f793f28 (Second push)
   margin-top: 4.8rem;
 }
 
 /* Hover effect for Our Team section */
 .containerBoxAboutUs:hover {
+<<<<<<< HEAD
   box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
   transform: translateY(-6px) scale(1.02);
   transition: box-shadow 0.3s, transform 0.3s;
+=======
+  transform: translateY(-6px) scale(1.02);
+  transition: transform 0.3s;
+>>>>>>> f793f28 (Second push)
   cursor: pointer;
 }
 .containerBoxImage {
@@ -674,7 +1123,10 @@ body {
 .testimonialCard {
   background: #fff8ee;
   border-radius: 12px;
+<<<<<<< HEAD
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+=======
+>>>>>>> f793f28 (Second push)
   padding: 32px 24px;
   max-width: 340px;
   min-width: 260px;
@@ -715,7 +1167,10 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+=======
+>>>>>>> f793f28 (Second push)
   min-height: 600px;
   box-sizing: border-box;
   margin: 5.8rem 0 4.2rem 0;
@@ -758,7 +1213,10 @@ body {
 .contactContainer {
   background: #fff;
   border-radius: 18px;
+<<<<<<< HEAD
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+=======
+>>>>>>> f793f28 (Second push)
   padding: 48px 36px 36px 36px;
   max-width: 900px;
   height: 500px;
@@ -768,9 +1226,14 @@ body {
   align-items: center;
 }
 .contactContainer:hover {
+<<<<<<< HEAD
   box-shadow: 0 8px 32px 0 rgba(193,40,45,0.18), 0 2px 12px rgba(0,0,0,0.10);
   transform: translateY(-6px) scale(1.02);
   transition: box-shadow 0.3s, transform 0.3s;
+=======
+  transform: translateY(-6px) scale(1.02);
+  transition: transform 0.3s;
+>>>>>>> f793f28 (Second push)
   cursor: pointer;
 }
 .contactContainer h2 {
@@ -846,7 +1309,10 @@ body {
   height: 36px;
   font-size: 0.8rem;
   cursor: pointer;
+<<<<<<< HEAD
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+=======
+>>>>>>> f793f28 (Second push)
   opacity: 1;
   transition: opacity 0.3s, background 0.2s;
   display: flex;
@@ -941,8 +1407,13 @@ body {
 /* Hover effect for Contact Us block, not affecting paragraphs */
 .contactTextBlock:hover {
   /* Only visual effect, does not override layout or children */
+<<<<<<< HEAD
   box-shadow: 0 8px 32px 0 rgba(193,40,45,0.10), 0 2px 12px rgba(0,0,0,0.08);
   transform: translateY(-4px) scale(1.01);
   transition: box-shadow 0.3s, transform 0.3s;
+=======
+  transform: translateY(-4px) scale(1.01);
+  transition: transform 0.3s;
+>>>>>>> f793f28 (Second push)
   cursor: pointer;
 }
